@@ -1,4 +1,4 @@
-import { addNumbers } from "./basic";
+import { addNumbers, checkForAndroidPlatform } from "./basic";
 
 describe("equality check test", () => {
 	it("should add 1 + 2 to 3", () => {
@@ -44,8 +44,27 @@ describe("relational operator check", () => {
 	});
 });
 
-describe("to close value check", () => {
+describe("close value check", () => {
 	it("should evaluate to true", () => {
 		expect(3).toBeCloseTo(2.99999);
+	});
+});
+
+describe("strings checks", () => {
+	it("should match the regex exp", () => {
+		expect("shaun peiling").toMatch(/^shaun/);
+	});
+});
+
+describe("array checks", () => {
+	it("should have eggs in shopping list", () => {
+		const shoppingList = ["eggs", "breads", "milks"];
+		expect(shoppingList).toContain("eggs");
+	});
+});
+
+describe("checks for exceptions", () => {
+	it("should raise an exception on invalid platform", () => {
+		expect(() => checkForAndroidPlatform()).toThrow("Not a valid platform");
 	});
 });
