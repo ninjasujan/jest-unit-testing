@@ -32,3 +32,5 @@
   "test": "jest"
 }
 ```
+
+5. To build js artifact use the command `"build": "tsc ./src/**/*.ts --outDir ./dist"`

@@ -1,4 +1,4 @@
-import { addNumbers, checkForAndroidPlatform } from "./basic";
+import { addNumbers, checkForAndroidPlatform } from "./sync";
 
 describe("equality check test", () => {
 	it("should add 1 + 2 to 3", () => {
